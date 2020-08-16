@@ -1,7 +1,10 @@
-const toppings = ['bacon', 'chilli'];
+const pizza = {
+  name: 'Pepperoni',
+};
 
-const newToppings = ['pepperoni'];
+const toppings = ['pepperoni'];
 
-const allToppings = [...newToppings, ...toppings];
-
-console.log(allToppings);
+const order = {
+  ...pizza,
+  toppings,
+};
