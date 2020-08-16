@@ -4,7 +4,11 @@ const pizza = {
 
 const toppings = ['pepperoni'];
 
-const order = {
+const order = Object.assign({}, pizza, { toppings });
+
+const spreadOrder = {
   ...pizza,
   toppings,
 };
+
+console.log(order, spreadOrder);
