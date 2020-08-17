@@ -1,14 +1,10 @@
-const pizza = {
-  name: 'Pepperoni',
-};
+const pizzaCost: number = 10;
+const pizzaToppings: number = 5;
 
-const toppings = ['pepperoni'];
+function calculatePrice(cost: number, toppings: number): number {
+  return cost + 1.5 * toppings;
+}
 
-const order = Object.assign({}, pizza, { toppings });
+const cost: number = calculatePrice(pizzaCost, pizzaToppings);
 
-const spreadOrder = {
-  ...pizza,
-  toppings,
-};
-
-console.log(order, spreadOrder);
+console.log(`Pizza costs: ${cost}`);
